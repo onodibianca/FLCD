@@ -1,0 +1,20 @@
+#Get number of divisors
+
+int i;
+int count;
+count->0;
+i->1;
+read(n);
+while (n+1>i)
+<<
+if (n % i = 0) << 
+count = count + 1; >>
+i=i+1;
+>>
+write (count);
+
+
+
+
+
+

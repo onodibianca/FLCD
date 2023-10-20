@@ -1,0 +1,19 @@
+#Get number of divisors
+
+int 3i;
+int count;
+count->0;
+3i->1;
+read(n);
+while (n+1>3i)
+<<
+if (n % 3i ~ 0) << 
+count = count + 31; >>
+3i=3i+1;
+>>
+write (count);
+
+
+
+
+
