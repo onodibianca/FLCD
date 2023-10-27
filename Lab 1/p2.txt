@@ -3,7 +3,7 @@ int m;
 int i;
 i->1;
 m->0;
-read(n);
+read(n); ##comment from Drgos## -- here too you should ve declared n first
 while (n>0)
 <<
 m -> m * i + n % 10;
