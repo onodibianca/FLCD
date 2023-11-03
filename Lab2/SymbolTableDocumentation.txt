@@ -1,0 +1,15 @@
+link to GitHub: 
+
+Symbol Table using a hash table
+
+*the class Element represents one element of the hash table represented as pairs of key-value. This class contains a constructor and a str function used to printt the element
+
+*the hashtable uses a list of lists,, which has a fixed capacity given in the constructor
+
+*the check_if_already_exists function returns the index of the list on the hashed key value position of the hash table, where the given element has been found (by checking if they have the same hashed key value and key value as well). In case the element was not found the function returns -1
+
+*the insert function checks if the element already exists by calling the check_if_already_exists function. if it does it will not be added again , but in case of being given a different value than the one it already has, the value will be updated. If the element is not in the list it will be  appended to the list positioned on the element's key hashed value position.
+
+*the delete function looks for the element to be removed in the corresponding list to the element's hashed key value , in case it ifnds it the function wil delete it from the hash_table and the funciton will return the value 1. In case there is no such variable the funciton will return -1
+
+*the str fucntion is used to print out the SymbolTable
