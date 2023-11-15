@@ -1,0 +1,12 @@
+int m;
+int i;
+i->1;
+m->0;
+read(n);
+while (n>0)
+<<
+m -> m * i + n % 10;
+i -> i * 10;
+n -> n / 10;
+>>
+write(m);
