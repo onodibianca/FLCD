@@ -1,0 +1,57 @@
+program decllist declaration identifiers const_types list_declar relation bool_op arithm_op expr_seq expression condition all_terms term ifstmt whilestmt text prints iostmt assign_stmt simple_stmt stmt_list cmpd_stmt struct_stmt stmt variables all_types list_declar const_types identifiers declaration
+
+ + - * / % & ^ < <= = != >= > 
+
+program -> VAR decllist  ;  
+
+ decllist -> declaration | declaration , decllist 
+
+ declaration -> const_type  Identifier  ; | const_types  Identifier  ,  identifiers  ; | list_declar 
+
+ identifiers -> Identifier | Identifier identifiers 
+
+ const_types -> Integer | Char | String | Bool 
+
+ list_declar -> Identifier  ->  [  ]  ; | Identifier  ->  [  variables  ]  ; 
+
+ variables  -> all_types | all_types  ,  variables 
+
+ all_types -> Integer | Char | String | List | Bool 
+
+ stmt  -> simple_stmt | struct_stmt 
+
+ struct_stmt  -> cmp_stmt | if_stmt | while_stmt 
+ 
+ cmpd_stmt  ->   <<  stmt_list   >> 
+
+ stmt_list  -> stmt  ; | stmt  ;  stmt_list 
+
+ simple_stmt  -> assign_stmt | iostmt 
+
+ assign_stmt  -> Identifier  ->  expression | Identifier  ->  all_terms 
+
+ iostmt  -> read  (  Identifier  ) | write  (  prints  ) 
+
+ prints  -> Identifier | text | Identifier  prints | text  prints 
+
+ text -> Char | Digit | tokens | Char  text | Digit  text | tokens  text 
+
+ whilestmt  -> while  (  condition  )   <<  stmt   >> 
+
+ ifstmt  -> if  (  condition  )   <<  stmt   >>  else   <<  stmt   >> 
+
+ term  -> Identifier | Integer 
+
+ all_terms  -> Identifier | Integer | Char | String | List | Bool 
+
+ condition  -> expression  relation  expression  | expression  relation  expression  bool_op  condition 
+
+ expression  -> ( term  arithm_op  term ) | ( term  arithm_op  expression ) | ( expression  arithm_op  expression  ) 
+
+ expr_seq  -> arithm_op  term ( | arithm_op  term  expr_seq )
+
+ arithm_op  -> + | - | * | / | % 
+
+ bool_op  -> & | ^ 
+
+ relation  -> <  | <= | = | != | >= | >
